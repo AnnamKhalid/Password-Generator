@@ -90,9 +90,22 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-  
+  var passwordLength = prompt("Enter the length of the password (between 8 and 128 characters)");
+  if (length < 8 && length > 128) {
+    alert("Password length must be a number between 8 and 128.");
+    return length;
   }
+
+  var lowercase = confirm(" Should your password include lowercase characters?")
   
+  var uppercase = confirm( " Should your password include uppercase characters?")
+
+  var number = confirm(" Should your password include numeric characters?")
+
+  var specialChar = confirm(" Should your password include special characters?")
+  
+};
+
   // Function for getting a random element from an array
   function getRandom(arr) {
   
