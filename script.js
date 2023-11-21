@@ -103,7 +103,11 @@ var specialCharacters = [
   var number = confirm(" Should your password include numeric characters?")
 
   var specialChar = confirm(" Should your password include special characters?")
-  
+
+if (!upperCasedCharacters || !lowerCasedCharacters || !numericCharacters || !specialCharacters) {
+  alert("Character type not selected. Please select at least one character type." );
+}
+
 };
 
   // Function for getting a random element from an array
