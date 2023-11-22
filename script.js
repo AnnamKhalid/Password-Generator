@@ -100,7 +100,7 @@ var specialCharacters = [
 
   var specialChar = confirm(" Should your password include special characters?")
 
-if (!lowercase|| !uppercase || !number || !specialChar) {
+if (!lowercase && !uppercase && !number && !specialChar) {
   alert("Character type not selected. Please select at least one character type." );
 }
 
@@ -110,22 +110,27 @@ getPasswordOptions();
   // Function for getting a random element from an array
   var allArrCombined = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
 
-  function getRandom(arr) {
+  function getRandom() {
     var index = Math.floor(Math.random() * allArrCombined.length);
-    return(allArrCombined[index]);
+    console.log(allArrCombined[index])
+    return allArrCombined[index];
   };
    getRandom();
-   
+
   
   // Function to generate password with user input
   function generatePassword() {
-    var passwordLength 
-    if (length < 8 && length > 128) {
-      return null;
-    } else ( length > 8 && length < 128); {
-      return passwordLength;
-    };
-  };
+    var passwordLength = prompt("How many characters do you want in your password? (8-128)");
+
+    if (passwordLength < 8 || passwordLength > 128) {alert("Password length must be between 8 and 128 characters");
+    return generatePassword();} 
+      else {var newPassword = "";
+        for (var i = 0; i <passwordLength; i++){newPassword += getRandom();
+        }
+        console.log(newPassword);
+        return newPassword;
+      } 
+    }
    generatePassword();
 
 
