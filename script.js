@@ -106,12 +106,16 @@ if (!lowercase|| !uppercase || !number || !specialChar) {
 
 };
 getPasswordOptions();
+
   // Function for getting a random element from an array
+  var allArrCombined = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
+
   function getRandom(arr) {
-    var 
-    
-  
-  }
+    var index = Math.floor(Math.random() * allArrCombined.length);
+    return(allArrCombined[index]);
+  };
+   getRandom();
+   
   
   // Function to generate password with user input
   function generatePassword() {
