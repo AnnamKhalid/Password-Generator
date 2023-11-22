@@ -90,11 +90,7 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-  var passwordLength = prompt("Enter the length of the password (between 8 and 128 characters)");
-  if (length < 8 && length > 128) {
-    alert("Password length must be a number between 8 and 128.");
-    return length;
-  }
+  
 
   var lowercase = confirm(" Should your password include lowercase characters?")
   
@@ -109,17 +105,26 @@ if (!upperCasedCharacters || !lowerCasedCharacters || !numericCharacters || !spe
 }
 
 };
-
+getPasswordOptions();
   // Function for getting a random element from an array
   function getRandom(arr) {
+    var 
+    
   
   }
   
   // Function to generate password with user input
   function generatePassword() {
-  
-  }
-  
+    var passwordLength 
+    if (length < 8 && length > 128) {
+      return null;
+    } else ( length > 8 && length < 128); {
+      return passwordLength;
+    };
+  };
+   generatePassword();
+
+
   // Get references to the #generate element
   var generateBtn = document.querySelector('#generate');
   
