@@ -100,18 +100,22 @@ var specialCharacters = [
 
   var specialChar = confirm(" Should your password include special characters?")
 
-if (!upperCasedCharacters || !lowerCasedCharacters || !numericCharacters || !specialCharacters) {
+if (!lowercase|| !uppercase || !number || !specialChar) {
   alert("Character type not selected. Please select at least one character type." );
 }
 
 };
 getPasswordOptions();
+
   // Function for getting a random element from an array
+  var allArrCombined = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
+
   function getRandom(arr) {
-    var 
-    
-  
-  }
+    var index = Math.floor(Math.random() * allArrCombined.length);
+    return(allArrCombined[index]);
+  };
+   getRandom();
+   
   
   // Function to generate password with user input
   function generatePassword() {
