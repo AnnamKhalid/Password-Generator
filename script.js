@@ -100,7 +100,7 @@ var specialCharacters = [
 
   var specialChar = confirm(" Should your password include special characters?")
 
-if (!upperCasedCharacters || !lowerCasedCharacters || !numericCharacters || !specialCharacters) {
+if (!lowercase|| !uppercase || !number || !specialChar) {
   alert("Character type not selected. Please select at least one character type." );
 }
 
